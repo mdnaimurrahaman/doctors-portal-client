@@ -1,13 +1,10 @@
 import React from "react";
 
-const Service = ({service}) => {
+const Service = ({ service }) => {
   return (
     <div class="card lg:max-w-lg bg-base-100 shadow-xl">
       <figure class="px-10 pt-10">
-        <img
-          src={service.img}
-          class="rounded-xl"
-        />
+        <img src={service.img} class="rounded-xl" />
       </figure>
       <div class="card-body px-10 items-center text-center">
         <h2 class="card-title">{service.name}</h2>

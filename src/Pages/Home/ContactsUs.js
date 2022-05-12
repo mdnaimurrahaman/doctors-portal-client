@@ -8,13 +8,13 @@ const ContactsUs = () => {
       style={{
         background: `url(${appointment})`,
       }}
-      className="mb-28"
+      class="mb-14"
     >
       <div class="card flex-shrink-0 w-full max-w-sm mx-auto">
-          <div className=" mt-10 text-center">
-              <h3 className="text-xl text-primary">Contact Us</h3>
-              <h3 className="text-3xl text-white">Stay connected with us</h3>
-          </div>
+        <div class=" mt-10 text-center">
+          <h3 class="text-xl text-primary">Contact Us</h3>
+          <h3 class="text-3xl text-white">Stay connected with us</h3>
+        </div>
         <div class="card-body">
           <div class="form-control">
             <input
@@ -29,12 +29,14 @@ const ContactsUs = () => {
               placeholder="password"
               class="input input-bordered"
             />
-
           </div>
           <div class="form-control mt-2">
-            <textarea className="" type="textarea"
+            <textarea
+              class=""
+              type="textarea"
               placeholder="your messages"
-              class="input input-bordered"></textarea>
+              class="input input-bordered"
+            ></textarea>
           </div>
           <div class=" text-center my-6">
             <PrimaryButton>Submit</PrimaryButton>

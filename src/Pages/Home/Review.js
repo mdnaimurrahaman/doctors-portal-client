@@ -11,15 +11,15 @@ const Review = ({ review }) => {
           using Content here, content
         </p>
       </div>
-      <div className="flex items-center justify-center mb-7">
+      <div class="flex items-center justify-center mb-7">
         <div class="avatar">
           <div class="w-16 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2 mr-5">
-            <img src={review.img} alt=""/>
+            <img src={review.img} alt="" />
           </div>
         </div>
         <div>
-            <h4 className="text-xl">{review.name}</h4>
-            <p>{review.location}</p>
+          <h4 class="text-xl">{review.name}</h4>
+          <p>{review.location}</p>
         </div>
       </div>
     </div>
