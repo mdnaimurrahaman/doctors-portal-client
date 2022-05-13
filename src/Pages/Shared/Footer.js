@@ -33,7 +33,7 @@ const Footer = () => {
         </div>
       </div>
       <div class="my-10 text-center">
-        <p>Copyright © 2022 - All right reserved Naimur Rahaman</p>
+        <p>Copyright © 2022 - All right reserved</p>
       </div>
     </footer>
   );

@@ -7,11 +7,11 @@ import ContactUs from './Pages/ContactUs/ContactUs';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import Reviews from './Pages/Reviews/Reviews';
-import Navbar from './Pages/Shared/Navbar';
+import Navbar from './Pages/Shared/Navbar'
 
 function App() {
   return (
-    <div>
+    <div className='max-w-7xl mx-auto'>
       <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<Home></Home>}/>
