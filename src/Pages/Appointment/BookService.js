@@ -4,9 +4,9 @@ const BookService = ({ service, setTreatment }) => {
   const { name, slots } = service;
   // console.log(service)
   return (
-    <div class="card lg:max-w-lg bg-base-100 shadow-xl text-center">
-      <div class="card-body">
-        <h2 class="text-xl text-secondary font-bold">{name}</h2>
+    <div className="card lg:max-w-lg bg-base-100 shadow-xl text-center">
+      <div className="card-body">
+        <h2 className="text-xl text-secondary font-bold">{name}</h2>
         <p>
           {slots.length > 0 ? (
             <span>{slots[0]}</span>
@@ -17,12 +17,12 @@ const BookService = ({ service, setTreatment }) => {
         <p>
           {slots.length} {slots.length > 1 ? "spaces" : "space"} Available
         </p>
-        <div class="card-actions justify-center">
+        <div className="card-actions justify-center">
           <label
             for="booking-modal"
             onClick={() => setTreatment(service)}
             disabled={slots.length === 0}
-            class="btn btn-primary uppercase bg-gradient-to-r from-secondary to-primary text-white border-0"
+            className="btn btn-primary uppercase bg-gradient-to-r from-secondary to-primary text-white border-0"
           >
             Book Appointment
           </label>

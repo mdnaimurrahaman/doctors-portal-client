@@ -8,37 +8,37 @@ const ContactsUs = () => {
       style={{
         background: `url(${appointment})`,
       }}
-      class="mb-14"
+      className="mb-14"
     >
-      <div class="card flex-shrink-0 w-full max-w-sm mx-auto">
-        <div class=" mt-10 text-center">
-          <h3 class="text-xl text-primary">Contact Us</h3>
-          <h3 class="text-3xl text-white">Stay connected with us</h3>
+      <div className="card flex-shrink-0 w-full max-w-sm mx-auto">
+        <div className=" mt-10 text-center">
+          <h3 className="text-xl text-primary">Contact Us</h3>
+          <h3 className="text-3xl text-white">Stay connected with us</h3>
         </div>
-        <div class="card-body">
-          <div class="form-control">
+        <div className="card-body">
+          <div className="form-control">
             <input
               type="text"
               placeholder="email address"
-              class="input input-bordered"
+              className="input input-bordered"
             />
           </div>
-          <div class="form-control mt-2">
+          <div className="form-control mt-2">
             <input
               type="text"
               placeholder="password"
-              class="input input-bordered"
+              className="input input-bordered"
             />
           </div>
-          <div class="form-control mt-2">
+          <div className="form-control mt-2">
             <textarea
-              class=""
+              className=""
               type="textarea"
               placeholder="your messages"
-              class="input input-bordered"
+              className="input input-bordered"
             ></textarea>
           </div>
-          <div class=" text-center my-6">
+          <div className=" text-center my-6">
             <PrimaryButton>Submit</PrimaryButton>
           </div>
         </div>
