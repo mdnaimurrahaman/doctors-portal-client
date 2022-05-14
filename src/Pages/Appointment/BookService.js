@@ -2,6 +2,7 @@ import React from "react";
 
 const BookService = ({ service, setTreatment }) => {
   const { name, slots } = service;
+  // console.log(service)
   return (
     <div class="card lg:max-w-lg bg-base-100 shadow-xl text-center">
       <div class="card-body">
