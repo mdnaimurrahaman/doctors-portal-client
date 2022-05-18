@@ -12,7 +12,7 @@ const Dashboard = () => {
     <div className="drawer drawer-mobile">
       <input id="dashboard-sidebar" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content">
-        <h2 className="text-3xl font-bold mb-7">My Appointment</h2>
+        <h2 className="text-3xl font-bold my-10 text-center text-primary">Welcome To Doctors Portal Dashboard</h2>
         <Outlet></Outlet>
       </div>
       <div className="drawer-side">
@@ -29,6 +29,7 @@ const Dashboard = () => {
           {admin && <>
             <li><Link to="/dashboard/users">All Users</Link></li>
             <li><Link to="/dashboard/addDoctor">Add a Doctor</Link></li>
+            <li><Link to="/dashboard/manageDoctor">Manage Doctors</Link></li>
           </>}
         </ul>
       </div>
