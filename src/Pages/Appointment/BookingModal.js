@@ -8,8 +8,8 @@ const BookingModal = ({ date, treatment, setTreatment, refetch }) => {
   const { _id, name, slots } = treatment;
   const [user, loading, error] = useAuthState(auth);
 
-// --------- date added er jonno format pp theke date newa holo .
-  const formattedDate = format(date, 'PP');
+  // --------- date added er jonno format pp theke date newa holo .
+  const formattedDate = format(date, "PP");
   //----------------------------------------------//
 
   const handleBooking = (event) => {
@@ -17,8 +17,7 @@ const BookingModal = ({ date, treatment, setTreatment, refetch }) => {
     const slot = event.target.slot.value;
     console.log(_id, name, slot);
 
-
-// Booking info ready to set database .---------------//
+    // Booking info ready to set database .---------------//
     const booking = {
       treatmentId: _id,
       treatment: name,
@@ -26,33 +25,31 @@ const BookingModal = ({ date, treatment, setTreatment, refetch }) => {
       slot,
       patient: user.email,
       patientName: user.displayName,
-      phone: event.target.phone.value
+      phone: event.target.phone.value,
+    };
 
-    }
-
-    fetch('http://localhost:5000/booking',{
-      method: 'POST',
+    fetch("https://intense-everglades-17536.herokuapp.com/booking", {
+      method: "POST",
       headers: {
-        'content-type': 'application/json'
+        "content-type": "application/json",
       },
-      body: JSON.stringify(booking)
+      body: JSON.stringify(booking),
     })
-    .then(res => res.json())
-    .then(data => {
-      console.log(data)
-      if(data.success){
-        toast(`Appointment is set,  ${formattedDate} at ${slot} `)
-      }
-      else{
-        toast.error(`You already have an appointment on,  ${data.booking?.date} at ${data.booking?.slot} `)
-      }
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.success) {
+          toast(`Appointment is set,  ${formattedDate} at ${slot} `);
+        } else {
+          toast.error(
+            `You already have an appointment on,  ${data.booking?.date} at ${data.booking?.slot} `
+          );
+        }
 
-      refetch();
-      //---------- to close the modal ---------------//
-    setTreatment(null);
-    })
-
-  
+        refetch();
+        //---------- to close the modal ---------------//
+        setTreatment(null);
+      });
   };
 
   return (
@@ -84,19 +81,23 @@ const BookingModal = ({ date, treatment, setTreatment, refetch }) => {
               className="select select-bordered w-full max-w-xs"
             >
               {slots?.map((slot, index) => (
-                <option key={index} value={slot}>{slot}</option>
+                <option key={index} value={slot}>
+                  {slot}
+                </option>
               ))}
             </select>
             <input
               type="text"
               name="name"
-              disabled value={user?.displayName || ''}
+              disabled
+              value={user?.displayName || ""}
               className="input input-bordered w-full max-w-xs"
             />
             <input
               type="text"
               name="email"
-              disabled value={user?.email || ''}
+              disabled
+              value={user?.email || ""}
               className="input input-bordered w-full max-w-xs"
             />
             <input

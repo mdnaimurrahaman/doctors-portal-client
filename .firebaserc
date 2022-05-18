@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "doctors-portal-7decd",
+    "firebase use --add": "doctors-portal-7decd",
+    "y": "doctors-portal-7decd"
+  },
+  "targets": {}
+}
