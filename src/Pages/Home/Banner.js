@@ -18,7 +18,7 @@ const Banner = () => {
           <p className="py-6">
             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
             excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
+            a id nisi Provident.
           </p>
           <PrimaryButton>Get Started</PrimaryButton>
         </div>
